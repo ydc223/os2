@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 
 extern char __executable_start;
@@ -12,7 +13,7 @@ int main(void)
   printf("    initialized data (edata)  0x%lx\n",(unsigned long) &_edata);
   printf("    uninitialized data (end)  0x%lx\n", (unsigned long)&_end);
   char *pt;
-  pt=(char*)malloc(40);
+  pt=(char*)malloc(10);
   printf("    address of heap start is 0x%p.\n", pt);
   printf("    uninitialized data (end) after allocating memory 0x%lx\n", (unsigned long)&_end);
 
