@@ -19,7 +19,6 @@ int main(void)
   pt=(char*)malloc(10);
   printf("    address of heap start is %p.\n", pt);
   printf("    uninitialized data (end) after allocating memory 0x%lx\n", (unsigned long)sbrk(0));
-
-
+  free(pt);
   return 0;
 }
