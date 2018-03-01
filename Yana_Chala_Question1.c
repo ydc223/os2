@@ -20,5 +20,7 @@ int main(void)
   printf("    address of heap start is %p.\n", pt);
   printf("    uninitialized data (end) after allocating memory 0x%lx\n", (unsigned long)sbrk(0));
   free(pt);
+  printf("    uninitialized data (end) after allocating memory 0x%lx\n", (unsigned long)sbrk(0));
+
   return 0;
 }
